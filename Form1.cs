@@ -25,7 +25,23 @@ namespace pracownicy
             employee.Salary = numericUpDown_salary.Value;
             employee.Birthday = dateTimePicker_birthday.Value;
             employee.PositionValue = (Employee.Position)comboBox_position.SelectedItem;
+            employee.Contract = ContractStatus();
             employeeList.Items.Add(employee);
+        }
+
+        private Employee.TypeOfContract ContractStatus()
+        {
+            if (radioButton_dzielo.Checked)
+            {
+                return Employee.TypeOfContract.Dzielo;
+            } else if (radioButton_zlecenie.Checked)
+            {
+                return Employee.TypeOfContract.Zlecenie;
+            }
+            else
+            {
+                return Employee.TypeOfContract.Praca;
+            }
         }
 
 

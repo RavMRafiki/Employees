@@ -165,7 +165,6 @@ namespace pracownicy
             this.radioButton_praca.Name = "radioButton_praca";
             this.radioButton_praca.Size = new System.Drawing.Size(127, 21);
             this.radioButton_praca.TabIndex = 12;
-            this.radioButton_praca.TabStop = true;
             this.radioButton_praca.Text = "Umowa o pracę";
             this.radioButton_praca.UseVisualStyleBackColor = true;
             // 
@@ -177,7 +176,6 @@ namespace pracownicy
             this.radioButton_zlecenie.Name = "radioButton_zlecenie";
             this.radioButton_zlecenie.Size = new System.Drawing.Size(131, 21);
             this.radioButton_zlecenie.TabIndex = 13;
-            this.radioButton_zlecenie.TabStop = true;
             this.radioButton_zlecenie.Text = "Umowa zlecenie";
             this.radioButton_zlecenie.UseVisualStyleBackColor = true;
             // 
@@ -189,7 +187,6 @@ namespace pracownicy
             this.radioButton_dzielo.Name = "radioButton_dzielo";
             this.radioButton_dzielo.Size = new System.Drawing.Size(128, 21);
             this.radioButton_dzielo.TabIndex = 14;
-            this.radioButton_dzielo.TabStop = true;
             this.radioButton_dzielo.Text = "Umowa o dzieło";
             this.radioButton_dzielo.UseVisualStyleBackColor = true;
             // 
