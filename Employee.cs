@@ -9,7 +9,7 @@ using System.Runtime.Serialization;
 
 namespace pracownicy
 {
-    class Employee : ISerializable
+    public class Employee : ISerializable
     {
         [Serializable()]
         public enum Position { Tester, Designer, Engineer, Developer};
