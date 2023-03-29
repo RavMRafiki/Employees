@@ -48,6 +48,7 @@ namespace pracownicy
                 return Employee.TypeOfContract.Praca;
             }
         }
+
         private void SaveToXml(object sender, EventArgs e)
         {
             List<Employee> theEmployees = new List<Employee> { };
@@ -63,6 +64,7 @@ namespace pracownicy
                 serializer2.Serialize(fs, theEmployees);
             }
         }
+
         private void ReadFormXml(object sender, EventArgs e)
         {
             List<Employee> theEmployees = new List<Employee> { };
