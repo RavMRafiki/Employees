@@ -4,10 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+using System.Runtime.Serialization;
+
+
 namespace pracownicy
 {
-    class Employee
+    class Employee : ISerializable
     {
+        [Serializable()]
         public enum Position { Tester, Designer, Engineer, Developer};
         public enum TypeOfContract { Praca, Zlecenie, Dzielo};
         private DateTime _birthday;
@@ -48,6 +52,31 @@ namespace pracownicy
         public override string ToString()
         {
             return _name + " " + _surname + " Urodzony: " + _birthday.ToString() + " Zarobek: " + _salary + " Umowa: " + _contract + " Na pozycji: " + _position;
+        }
+
+        public void GetObjectData(SerializationInfo info, StreamingContext context)
+        {
+            info.AddValue("Name", Name);
+            info.AddValue("Surname", Surname);
+            info.AddValue("Salary", Salary);
+            info.AddValue("Birthday", Birthday);
+            info.AddValue("Position", PositionValue);
+            info.AddValue("Contract", Contract);
+        }
+        public Employee(SerializationInfo info,StreamingContext ctxt)
+        {
+            Name = (string)info.GetValue("Name", typeof(string));
+            Surname = (string)info.GetValue("Surname", typeof(string));
+            Salary = (decimal)info.GetValue("Salary", typeof(decimal));
+            Birthday = (DateTime)info.GetValue("Birthday", typeof(DateTime));
+            PositionValue = (Position)info.GetValue("Position", typeof(Position));
+            Contract = (TypeOfContract)info.GetValue("Contract", typeof(TypeOfContract));
+
+
+        }
+
+        public Employee()
+        {
         }
     }
 }

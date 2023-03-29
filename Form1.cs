@@ -8,6 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+using System.IO;
+using System.Xml.Serialization;
+
 namespace pracownicy
 {
     public partial class Form1 : Form
@@ -42,6 +45,15 @@ namespace pracownicy
             else
             {
                 return Employee.TypeOfContract.Praca;
+            }
+        }
+
+        private void SaveToXml(object sender, EventArgs e)
+        {
+            using (Stream fs = new FileStream(@"C:\emloyees.xml", FileMode.Create, FileAccess.Write, FileShare.None))
+            {
+                XmlSerializer serializer2 = new XmlSerializer(typeof(List<Employee>));
+                serializer2.Serialize(fs, employeeList.Items);
             }
         }
 

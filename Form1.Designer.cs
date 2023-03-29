@@ -46,6 +46,7 @@ namespace pracownicy
             this.employeeList = new System.Windows.Forms.ListBox();
             this.button_save = new System.Windows.Forms.Button();
             this.groupBoxUmowa = new System.Windows.Forms.GroupBox();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_salary)).BeginInit();
             this.groupBoxUmowa.SuspendLayout();
             this.SuspendLayout();
@@ -221,11 +222,22 @@ namespace pracownicy
             this.groupBoxUmowa.TabIndex = 17;
             this.groupBoxUmowa.TabStop = false;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(271, 349);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(100, 28);
+            this.button1.TabIndex = 18;
+            this.button1.Text = "Zapisz Plik";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.SaveToXml);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1067, 405);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.groupBoxUmowa);
             this.Controls.Add(this.button_save);
             this.Controls.Add(this.employeeList);
@@ -270,6 +282,7 @@ namespace pracownicy
         private System.Windows.Forms.ListBox employeeList;
         private System.Windows.Forms.Button button_save;
         private System.Windows.Forms.GroupBox groupBoxUmowa;
+        private System.Windows.Forms.Button button1;
     }
 }
 
