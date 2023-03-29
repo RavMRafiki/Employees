@@ -44,19 +44,22 @@ namespace pracownicy
             this.radioButton_praca = new System.Windows.Forms.RadioButton();
             this.radioButton_zlecenie = new System.Windows.Forms.RadioButton();
             this.radioButton_dzielo = new System.Windows.Forms.RadioButton();
-            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.employeeList = new System.Windows.Forms.ListBox();
             this.button_save = new System.Windows.Forms.Button();
             this.employeeBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.employeeBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.groupBoxUmowa = new System.Windows.Forms.GroupBox();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_salary)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource)).BeginInit();
+            this.groupBoxUmowa.SuspendLayout();
             this.SuspendLayout();
             // 
             // textBox_name
             // 
             this.textBox_name.Location = new System.Drawing.Point(164, 31);
-            this.textBox_name.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox_name.Margin = new System.Windows.Forms.Padding(4);
             this.textBox_name.Name = "textBox_name";
             this.textBox_name.Size = new System.Drawing.Size(265, 22);
             this.textBox_name.TabIndex = 0;
@@ -64,7 +67,7 @@ namespace pracownicy
             // textBox_surname
             // 
             this.textBox_surname.Location = new System.Drawing.Point(164, 63);
-            this.textBox_surname.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox_surname.Margin = new System.Windows.Forms.Padding(4);
             this.textBox_surname.Name = "textBox_surname";
             this.textBox_surname.Size = new System.Drawing.Size(265, 22);
             this.textBox_surname.TabIndex = 1;
@@ -72,7 +75,7 @@ namespace pracownicy
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(89, 39);
+            this.label1.Location = new System.Drawing.Point(90, 36);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(33, 17);
@@ -82,7 +85,7 @@ namespace pracownicy
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(53, 71);
+            this.label2.Location = new System.Drawing.Point(56, 66);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(67, 17);
@@ -92,7 +95,7 @@ namespace pracownicy
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(16, 103);
+            this.label3.Location = new System.Drawing.Point(16, 100);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(107, 17);
@@ -102,7 +105,7 @@ namespace pracownicy
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(72, 135);
+            this.label4.Location = new System.Drawing.Point(69, 129);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(51, 17);
@@ -112,7 +115,7 @@ namespace pracownicy
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(41, 169);
+            this.label5.Location = new System.Drawing.Point(41, 162);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(79, 17);
@@ -122,7 +125,7 @@ namespace pracownicy
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(23, 197);
+            this.label6.Location = new System.Drawing.Point(24, 243);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(99, 17);
@@ -132,7 +135,7 @@ namespace pracownicy
             // dateTimePicker_birthday
             // 
             this.dateTimePicker_birthday.Location = new System.Drawing.Point(164, 95);
-            this.dateTimePicker_birthday.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dateTimePicker_birthday.Margin = new System.Windows.Forms.Padding(4);
             this.dateTimePicker_birthday.Name = "dateTimePicker_birthday";
             this.dateTimePicker_birthday.Size = new System.Drawing.Size(265, 22);
             this.dateTimePicker_birthday.TabIndex = 8;
@@ -141,7 +144,7 @@ namespace pracownicy
             // 
             this.comboBox_position.DataSource = System.Enum.GetValues(typeof(Employee.Position));
             this.comboBox_position.Location = new System.Drawing.Point(164, 159);
-            this.comboBox_position.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboBox_position.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox_position.Name = "comboBox_position";
             this.comboBox_position.Size = new System.Drawing.Size(265, 24);
             this.comboBox_position.TabIndex = 9;
@@ -149,7 +152,7 @@ namespace pracownicy
             // numericUpDown_salary
             // 
             this.numericUpDown_salary.Location = new System.Drawing.Point(164, 127);
-            this.numericUpDown_salary.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numericUpDown_salary.Margin = new System.Windows.Forms.Padding(4);
             this.numericUpDown_salary.Name = "numericUpDown_salary";
             this.numericUpDown_salary.Size = new System.Drawing.Size(267, 22);
             this.numericUpDown_salary.TabIndex = 11;
@@ -157,8 +160,8 @@ namespace pracownicy
             // radioButton_praca
             // 
             this.radioButton_praca.AutoSize = true;
-            this.radioButton_praca.Location = new System.Drawing.Point(164, 192);
-            this.radioButton_praca.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.radioButton_praca.Location = new System.Drawing.Point(18, 22);
+            this.radioButton_praca.Margin = new System.Windows.Forms.Padding(4);
             this.radioButton_praca.Name = "radioButton_praca";
             this.radioButton_praca.Size = new System.Drawing.Size(127, 21);
             this.radioButton_praca.TabIndex = 12;
@@ -169,8 +172,8 @@ namespace pracownicy
             // radioButton_zlecenie
             // 
             this.radioButton_zlecenie.AutoSize = true;
-            this.radioButton_zlecenie.Location = new System.Drawing.Point(164, 220);
-            this.radioButton_zlecenie.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.radioButton_zlecenie.Location = new System.Drawing.Point(18, 51);
+            this.radioButton_zlecenie.Margin = new System.Windows.Forms.Padding(4);
             this.radioButton_zlecenie.Name = "radioButton_zlecenie";
             this.radioButton_zlecenie.Size = new System.Drawing.Size(131, 21);
             this.radioButton_zlecenie.TabIndex = 13;
@@ -181,8 +184,8 @@ namespace pracownicy
             // radioButton_dzielo
             // 
             this.radioButton_dzielo.AutoSize = true;
-            this.radioButton_dzielo.Location = new System.Drawing.Point(164, 249);
-            this.radioButton_dzielo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.radioButton_dzielo.Location = new System.Drawing.Point(18, 80);
+            this.radioButton_dzielo.Margin = new System.Windows.Forms.Padding(4);
             this.radioButton_dzielo.Name = "radioButton_dzielo";
             this.radioButton_dzielo.Size = new System.Drawing.Size(128, 21);
             this.radioButton_dzielo.TabIndex = 14;
@@ -190,20 +193,20 @@ namespace pracownicy
             this.radioButton_dzielo.Text = "Umowa o dzieło";
             this.radioButton_dzielo.UseVisualStyleBackColor = true;
             // 
-            // listBox1
+            // employeeList
             // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 16;
-            this.listBox1.Location = new System.Drawing.Point(439, 23);
-            this.listBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(403, 308);
-            this.listBox1.TabIndex = 15;
+            this.employeeList.FormattingEnabled = true;
+            this.employeeList.ItemHeight = 16;
+            this.employeeList.Location = new System.Drawing.Point(439, 23);
+            this.employeeList.Margin = new System.Windows.Forms.Padding(4);
+            this.employeeList.Name = "employeeList";
+            this.employeeList.Size = new System.Drawing.Size(615, 372);
+            this.employeeList.TabIndex = 15;
             // 
             // button_save
             // 
-            this.button_save.Location = new System.Drawing.Point(164, 302);
-            this.button_save.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button_save.Location = new System.Drawing.Point(164, 349);
+            this.button_save.Margin = new System.Windows.Forms.Padding(4);
             this.button_save.Name = "button_save";
             this.button_save.Size = new System.Drawing.Size(100, 28);
             this.button_save.TabIndex = 16;
@@ -211,16 +214,25 @@ namespace pracownicy
             this.button_save.UseVisualStyleBackColor = true;
             this.button_save.Click += new System.EventHandler(this.button_save_Click);
             // 
+            // groupBoxUmowa
+            // 
+            this.groupBoxUmowa.Controls.Add(this.radioButton_praca);
+            this.groupBoxUmowa.Controls.Add(this.radioButton_zlecenie);
+            this.groupBoxUmowa.Controls.Add(this.radioButton_dzielo);
+            this.groupBoxUmowa.Location = new System.Drawing.Point(164, 190);
+            this.groupBoxUmowa.Name = "groupBoxUmowa";
+            this.groupBoxUmowa.Size = new System.Drawing.Size(265, 133);
+            this.groupBoxUmowa.TabIndex = 17;
+            this.groupBoxUmowa.TabStop = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1067, 345);
+            this.ClientSize = new System.Drawing.Size(1067, 405);
+            this.Controls.Add(this.groupBoxUmowa);
             this.Controls.Add(this.button_save);
-            this.Controls.Add(this.listBox1);
-            this.Controls.Add(this.radioButton_dzielo);
-            this.Controls.Add(this.radioButton_zlecenie);
-            this.Controls.Add(this.radioButton_praca);
+            this.Controls.Add(this.employeeList);
             this.Controls.Add(this.numericUpDown_salary);
             this.Controls.Add(this.comboBox_position);
             this.Controls.Add(this.dateTimePicker_birthday);
@@ -232,12 +244,14 @@ namespace pracownicy
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox_surname);
             this.Controls.Add(this.textBox_name);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_salary)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource)).EndInit();
+            this.groupBoxUmowa.ResumeLayout(false);
+            this.groupBoxUmowa.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -259,10 +273,12 @@ namespace pracownicy
         private System.Windows.Forms.RadioButton radioButton_praca;
         private System.Windows.Forms.RadioButton radioButton_zlecenie;
         private System.Windows.Forms.RadioButton radioButton_dzielo;
-        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.ListBox employeeList;
         private System.Windows.Forms.Button button_save;
         private System.Windows.Forms.BindingSource employeeBindingSource;
         private System.Windows.Forms.BindingSource employeeBindingSource1;
+        private System.Windows.Forms.GroupBox groupBoxUmowa;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
     }
 }
 

@@ -18,14 +18,32 @@ namespace pracownicy
         public string Name
         {
             get => _name;
+            set => _name = value;
         }
         public string Surname
         {
             get => _surname;
+            set => _surname = value;
         }
         public decimal Salary
         {
             get => _salary;
+            set => _salary = value;
+        }
+        public DateTime Birthday
+        {
+            get => _birthday;
+            set => _birthday = value;
+        }
+        public Position PositionValue
+        {
+            get => _position;
+            set => _position = value;
+        }
+        public TypeOfContract Contract
+        {
+            get => _contract;
+            set => _contract = value;
         }
         public override string ToString()
         {

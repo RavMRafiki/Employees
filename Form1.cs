@@ -19,7 +19,13 @@ namespace pracownicy
 
         private void button_save_Click(object sender, EventArgs e)
         {
-
+            Employee employee = new Employee();
+            employee.Name = textBox_name.Text;
+            employee.Surname = textBox_surname.Text;
+            employee.Salary = numericUpDown_salary.Value;
+            employee.Birthday = dateTimePicker_birthday.Value;
+            employee.PositionValue = (Employee.Position)comboBox_position.SelectedItem;
+            employeeList.Items.Add(employee);
         }
 
 
