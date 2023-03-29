@@ -34,7 +34,8 @@ namespace pracownicy
             if (radioButton_dzielo.Checked)
             {
                 return Employee.TypeOfContract.Dzielo;
-            } else if (radioButton_zlecenie.Checked)
+            } 
+            else if (radioButton_zlecenie.Checked)
             {
                 return Employee.TypeOfContract.Zlecenie;
             }
