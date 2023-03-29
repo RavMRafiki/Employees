@@ -78,7 +78,6 @@ namespace pracownicy
             {
                 employeeList.Items.Add(__employee);
             }
-
         }
 
     }
