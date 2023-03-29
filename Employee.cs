@@ -71,8 +71,6 @@ namespace pracownicy
             Birthday = (DateTime)info.GetValue("Birthday", typeof(DateTime));
             PositionValue = (Position)info.GetValue("Position", typeof(Position));
             Contract = (TypeOfContract)info.GetValue("Contract", typeof(TypeOfContract));
-
-
         }
 
         public Employee()
