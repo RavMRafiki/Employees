@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using System.Runtime.Serialization;
 
 
-namespace pracownicy
+namespace pracownicy.Model
 {
     public class Employee : ISerializable
     {

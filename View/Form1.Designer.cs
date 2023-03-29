@@ -1,5 +1,5 @@
 ﻿
-namespace pracownicy
+namespace pracownicy.View
 {
     partial class Form1
     {
@@ -50,7 +50,7 @@ namespace pracownicy
             this.buttonReadFromXml = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_salary)).BeginInit();
             this.groupBoxUmowa.SuspendLayout();
-            this.SuspendLayout();
+            //this.SuspendLayout();
             // 
             // textBox_name
             // 
@@ -140,7 +140,6 @@ namespace pracownicy
             // 
             // comboBox_position
             // 
-            this.comboBox_position.DataSource = System.Enum.GetValues(typeof(Employee.Position));
             this.comboBox_position.Location = new System.Drawing.Point(164, 159);
             this.comboBox_position.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox_position.Name = "comboBox_position";
@@ -212,7 +211,7 @@ namespace pracownicy
             this.button_save.TabIndex = 16;
             this.button_save.Text = "Zapisz";
             this.button_save.UseVisualStyleBackColor = true;
-            this.button_save.Click += new System.EventHandler(this.button_save_Click);
+            //this.button_save.Click += new System.EventHandler(this.button_save_Click);
             // 
             // groupBoxUmowa
             // 
@@ -233,7 +232,7 @@ namespace pracownicy
             this.buttonSaveToXml.TabIndex = 18;
             this.buttonSaveToXml.Text = "Zapisz Plik";
             this.buttonSaveToXml.UseVisualStyleBackColor = true;
-            this.buttonSaveToXml.Click += new System.EventHandler(this.SaveToXml);
+            //this.buttonSaveToXml.Click += new System.EventHandler(this.SaveToXml);
             // 
             // buttonReadFromXml
             // 
@@ -243,32 +242,32 @@ namespace pracownicy
             this.buttonReadFromXml.TabIndex = 19;
             this.buttonReadFromXml.Text = "Wczytaj Plik";
             this.buttonReadFromXml.UseVisualStyleBackColor = true;
-            this.buttonReadFromXml.Click += new System.EventHandler(this.ReadFormXml);
+            //this.buttonReadFromXml.Click += new System.EventHandler(this.ReadFormXml);
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1067, 405);
-            this.Controls.Add(this.buttonReadFromXml);
-            this.Controls.Add(this.buttonSaveToXml);
-            this.Controls.Add(this.groupBoxUmowa);
-            this.Controls.Add(this.button_save);
-            this.Controls.Add(this.employeeList);
-            this.Controls.Add(this.numericUpDown_salary);
-            this.Controls.Add(this.comboBox_position);
-            this.Controls.Add(this.dateTimePicker_birthday);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox_surname);
-            this.Controls.Add(this.textBox_name);
-            this.Margin = new System.Windows.Forms.Padding(4);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            //this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            //this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            //this.ClientSize = new System.Drawing.Size(1067, 405);
+            //this.Controls.Add(this.buttonReadFromXml);
+            //this.Controls.Add(this.buttonSaveToXml);
+            //this.Controls.Add(this.groupBoxUmowa);
+            //this.Controls.Add(this.button_save);
+            //this.Controls.Add(this.employeeList);
+            //this.Controls.Add(this.numericUpDown_salary);
+            //this.Controls.Add(this.comboBox_position);
+            //this.Controls.Add(this.dateTimePicker_birthday);
+            //this.Controls.Add(this.label6);
+            //this.Controls.Add(this.label5);
+            //this.Controls.Add(this.label4);
+            //this.Controls.Add(this.label3);
+            //this.Controls.Add(this.label2);
+            //this.Controls.Add(this.label1);
+            //this.Controls.Add(this.textBox_surname);
+            //this.Controls.Add(this.textBox_name);
+            //this.Margin = new System.Windows.Forms.Padding(4);
+            //this.Name = "Form1";
+            //this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_salary)).EndInit();
             this.groupBoxUmowa.ResumeLayout(false);
             this.groupBoxUmowa.PerformLayout();
