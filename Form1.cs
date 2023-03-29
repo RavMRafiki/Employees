@@ -43,8 +43,5 @@ namespace pracownicy
                 return Employee.TypeOfContract.Praca;
             }
         }
-
-
-        //serializacja obiektu do pliku xml
     }
 }
