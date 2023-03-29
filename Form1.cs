@@ -17,6 +17,11 @@ namespace pracownicy
             InitializeComponent();
         }
 
+        private void button_save_Click(object sender, EventArgs e)
+        {
+
+        }
+
 
         //serializacja obiektu do pliku xml
     }

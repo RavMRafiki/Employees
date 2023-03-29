@@ -29,7 +29,7 @@ namespace pracownicy
         }
         public override string ToString()
         {
-            return "";
+            return _name + " " + _surname + "Urodzony: " + _birthday.ToString() + " Zarobek: " + _salary + " Umowa: " + _contract + " Na pozycji: " + _position;
         }
     }
 }

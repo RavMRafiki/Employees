@@ -55,102 +55,112 @@ namespace pracownicy
             // 
             // textBox_name
             // 
-            this.textBox_name.Location = new System.Drawing.Point(123, 25);
+            this.textBox_name.Location = new System.Drawing.Point(164, 31);
+            this.textBox_name.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBox_name.Name = "textBox_name";
-            this.textBox_name.Size = new System.Drawing.Size(200, 20);
+            this.textBox_name.Size = new System.Drawing.Size(265, 22);
             this.textBox_name.TabIndex = 0;
             // 
             // textBox_surname
             // 
-            this.textBox_surname.Location = new System.Drawing.Point(123, 51);
+            this.textBox_surname.Location = new System.Drawing.Point(164, 63);
+            this.textBox_surname.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBox_surname.Name = "textBox_surname";
-            this.textBox_surname.Size = new System.Drawing.Size(200, 20);
+            this.textBox_surname.Size = new System.Drawing.Size(265, 22);
             this.textBox_surname.TabIndex = 1;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(67, 32);
+            this.label1.Location = new System.Drawing.Point(89, 39);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(26, 13);
+            this.label1.Size = new System.Drawing.Size(33, 17);
             this.label1.TabIndex = 2;
             this.label1.Text = "Imię";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(40, 58);
+            this.label2.Location = new System.Drawing.Point(53, 71);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(53, 13);
+            this.label2.Size = new System.Drawing.Size(67, 17);
             this.label2.TabIndex = 3;
             this.label2.Text = "Nazwisko";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(12, 84);
+            this.label3.Location = new System.Drawing.Point(16, 103);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(81, 13);
+            this.label3.Size = new System.Drawing.Size(107, 17);
             this.label3.TabIndex = 4;
             this.label3.Text = "Data Urodzenia";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(54, 110);
+            this.label4.Location = new System.Drawing.Point(72, 135);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(39, 13);
+            this.label4.Size = new System.Drawing.Size(51, 17);
             this.label4.TabIndex = 5;
             this.label4.Text = "Pensja";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(31, 137);
+            this.label5.Location = new System.Drawing.Point(41, 169);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(62, 13);
+            this.label5.Size = new System.Drawing.Size(79, 17);
             this.label5.TabIndex = 6;
             this.label5.Text = "Stanowisko";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(17, 160);
+            this.label6.Location = new System.Drawing.Point(23, 197);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(76, 13);
+            this.label6.Size = new System.Drawing.Size(99, 17);
             this.label6.TabIndex = 7;
             this.label6.Text = "Rodzaj umowy";
             // 
             // dateTimePicker_birthday
             // 
-            this.dateTimePicker_birthday.Location = new System.Drawing.Point(123, 77);
+            this.dateTimePicker_birthday.Location = new System.Drawing.Point(164, 95);
+            this.dateTimePicker_birthday.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dateTimePicker_birthday.Name = "dateTimePicker_birthday";
-            this.dateTimePicker_birthday.Size = new System.Drawing.Size(200, 20);
+            this.dateTimePicker_birthday.Size = new System.Drawing.Size(265, 22);
             this.dateTimePicker_birthday.TabIndex = 8;
             // 
             // comboBox_position
             // 
-
-            Employee employee = new Employee();
-            this.comboBox_position.FormattingEnabled = true;
-            this.comboBox_position.Location = new System.Drawing.Point(123, 129);
+            this.comboBox_position.DataSource = System.Enum.GetValues(typeof(Employee.Position));
+            this.comboBox_position.Location = new System.Drawing.Point(164, 159);
+            this.comboBox_position.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.comboBox_position.Name = "comboBox_position";
-            this.comboBox_position.Size = new System.Drawing.Size(200, 21);
+            this.comboBox_position.Size = new System.Drawing.Size(265, 24);
             this.comboBox_position.TabIndex = 9;
             // 
             // numericUpDown_salary
             // 
-            this.numericUpDown_salary.Location = new System.Drawing.Point(123, 103);
+            this.numericUpDown_salary.Location = new System.Drawing.Point(164, 127);
+            this.numericUpDown_salary.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.numericUpDown_salary.Name = "numericUpDown_salary";
-            this.numericUpDown_salary.Size = new System.Drawing.Size(200, 20);
+            this.numericUpDown_salary.Size = new System.Drawing.Size(267, 22);
             this.numericUpDown_salary.TabIndex = 11;
             // 
             // radioButton_praca
             // 
             this.radioButton_praca.AutoSize = true;
-            this.radioButton_praca.Location = new System.Drawing.Point(123, 156);
+            this.radioButton_praca.Location = new System.Drawing.Point(164, 192);
+            this.radioButton_praca.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.radioButton_praca.Name = "radioButton_praca";
-            this.radioButton_praca.Size = new System.Drawing.Size(100, 17);
+            this.radioButton_praca.Size = new System.Drawing.Size(127, 21);
             this.radioButton_praca.TabIndex = 12;
             this.radioButton_praca.TabStop = true;
             this.radioButton_praca.Text = "Umowa o pracę";
@@ -159,9 +169,10 @@ namespace pracownicy
             // radioButton_zlecenie
             // 
             this.radioButton_zlecenie.AutoSize = true;
-            this.radioButton_zlecenie.Location = new System.Drawing.Point(123, 179);
+            this.radioButton_zlecenie.Location = new System.Drawing.Point(164, 220);
+            this.radioButton_zlecenie.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.radioButton_zlecenie.Name = "radioButton_zlecenie";
-            this.radioButton_zlecenie.Size = new System.Drawing.Size(103, 17);
+            this.radioButton_zlecenie.Size = new System.Drawing.Size(131, 21);
             this.radioButton_zlecenie.TabIndex = 13;
             this.radioButton_zlecenie.TabStop = true;
             this.radioButton_zlecenie.Text = "Umowa zlecenie";
@@ -170,9 +181,10 @@ namespace pracownicy
             // radioButton_dzielo
             // 
             this.radioButton_dzielo.AutoSize = true;
-            this.radioButton_dzielo.Location = new System.Drawing.Point(123, 202);
+            this.radioButton_dzielo.Location = new System.Drawing.Point(164, 249);
+            this.radioButton_dzielo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.radioButton_dzielo.Name = "radioButton_dzielo";
-            this.radioButton_dzielo.Size = new System.Drawing.Size(102, 17);
+            this.radioButton_dzielo.Size = new System.Drawing.Size(128, 21);
             this.radioButton_dzielo.TabIndex = 14;
             this.radioButton_dzielo.TabStop = true;
             this.radioButton_dzielo.Text = "Umowa o dzieło";
@@ -181,33 +193,29 @@ namespace pracownicy
             // listBox1
             // 
             this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(329, 19);
+            this.listBox1.ItemHeight = 16;
+            this.listBox1.Location = new System.Drawing.Point(439, 23);
+            this.listBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(303, 251);
+            this.listBox1.Size = new System.Drawing.Size(403, 308);
             this.listBox1.TabIndex = 15;
             // 
             // button_save
             // 
-            this.button_save.Location = new System.Drawing.Point(123, 245);
+            this.button_save.Location = new System.Drawing.Point(164, 302);
+            this.button_save.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button_save.Name = "button_save";
-            this.button_save.Size = new System.Drawing.Size(75, 23);
+            this.button_save.Size = new System.Drawing.Size(100, 28);
             this.button_save.TabIndex = 16;
             this.button_save.Text = "Zapisz";
             this.button_save.UseVisualStyleBackColor = true;
-            // 
-            // employeeBindingSource1
-            // 
-            this.employeeBindingSource1.DataSource = typeof(pracownicy.Employee);
-            // 
-            // employeeBindingSource
-            // 
-            this.employeeBindingSource.DataSource = typeof(pracownicy.Employee);
+            this.button_save.Click += new System.EventHandler(this.button_save_Click);
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 280);
+            this.ClientSize = new System.Drawing.Size(1067, 345);
             this.Controls.Add(this.button_save);
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.radioButton_dzielo);
@@ -224,6 +232,7 @@ namespace pracownicy
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox_surname);
             this.Controls.Add(this.textBox_name);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Form1";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_salary)).EndInit();

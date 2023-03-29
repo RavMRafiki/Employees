@@ -18,3 +18,13 @@ C:\Users\student\Desktop\pracownicy\obj\Debug\pracownicy.pdb
 C:\Users\student\Desktop\pracownicy\bin\Debug\pracownicy.exe.config
 C:\Users\student\Desktop\pracownicy\bin\Debug\pracownicy.exe
 C:\Users\student\Desktop\pracownicy\bin\Debug\pracownicy.pdb
+C:\Users\rafal\source\repos\pracownicy\bin\Debug\pracownicy.exe.config
+C:\Users\rafal\source\repos\pracownicy\bin\Debug\pracownicy.exe
+C:\Users\rafal\source\repos\pracownicy\bin\Debug\pracownicy.pdb
+C:\Users\rafal\source\repos\pracownicy\obj\Debug\pracownicy.csproj.AssemblyReference.cache
+C:\Users\rafal\source\repos\pracownicy\obj\Debug\pracownicy.Form1.resources
+C:\Users\rafal\source\repos\pracownicy\obj\Debug\pracownicy.Properties.Resources.resources
+C:\Users\rafal\source\repos\pracownicy\obj\Debug\pracownicy.csproj.GenerateResource.cache
+C:\Users\rafal\source\repos\pracownicy\obj\Debug\pracownicy.csproj.CoreCompileInputs.cache
+C:\Users\rafal\source\repos\pracownicy\obj\Debug\pracownicy.exe
+C:\Users\rafal\source\repos\pracownicy\obj\Debug\pracownicy.pdb
