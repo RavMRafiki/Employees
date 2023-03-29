@@ -29,7 +29,6 @@ namespace pracownicy
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.textBox_name = new System.Windows.Forms.TextBox();
             this.textBox_surname = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -46,13 +45,10 @@ namespace pracownicy
             this.radioButton_dzielo = new System.Windows.Forms.RadioButton();
             this.employeeList = new System.Windows.Forms.ListBox();
             this.button_save = new System.Windows.Forms.Button();
-            this.employeeBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.employeeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.groupBoxUmowa = new System.Windows.Forms.GroupBox();
-            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.buttonSaveToXml = new System.Windows.Forms.Button();
+            this.buttonReadFromXml = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_salary)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource)).BeginInit();
             this.groupBoxUmowa.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -139,6 +135,8 @@ namespace pracownicy
             this.dateTimePicker_birthday.Name = "dateTimePicker_birthday";
             this.dateTimePicker_birthday.Size = new System.Drawing.Size(265, 22);
             this.dateTimePicker_birthday.TabIndex = 8;
+            this.dateTimePicker_birthday.MaxDate = System.DateTime.Now.AddYears(-18);
+            this.dateTimePicker_birthday.MinDate = System.DateTime.Now.AddYears(-100);
             // 
             // comboBox_position
             // 
@@ -153,6 +151,11 @@ namespace pracownicy
             // 
             this.numericUpDown_salary.Location = new System.Drawing.Point(164, 127);
             this.numericUpDown_salary.Margin = new System.Windows.Forms.Padding(4);
+            this.numericUpDown_salary.Maximum = new decimal(new int[] {
+            999999,
+            0,
+            0,
+            0});
             this.numericUpDown_salary.Name = "numericUpDown_salary";
             this.numericUpDown_salary.Size = new System.Drawing.Size(267, 22);
             this.numericUpDown_salary.TabIndex = 11;
@@ -202,10 +205,10 @@ namespace pracownicy
             // 
             // button_save
             // 
-            this.button_save.Location = new System.Drawing.Point(164, 349);
+            this.button_save.Location = new System.Drawing.Point(164, 322);
             this.button_save.Margin = new System.Windows.Forms.Padding(4);
             this.button_save.Name = "button_save";
-            this.button_save.Size = new System.Drawing.Size(100, 28);
+            this.button_save.Size = new System.Drawing.Size(265, 28);
             this.button_save.TabIndex = 16;
             this.button_save.Text = "Zapisz";
             this.button_save.UseVisualStyleBackColor = true;
@@ -218,15 +221,37 @@ namespace pracownicy
             this.groupBoxUmowa.Controls.Add(this.radioButton_dzielo);
             this.groupBoxUmowa.Location = new System.Drawing.Point(164, 190);
             this.groupBoxUmowa.Name = "groupBoxUmowa";
-            this.groupBoxUmowa.Size = new System.Drawing.Size(265, 133);
+            this.groupBoxUmowa.Size = new System.Drawing.Size(265, 125);
             this.groupBoxUmowa.TabIndex = 17;
             this.groupBoxUmowa.TabStop = false;
+            // 
+            // buttonSaveToXml
+            // 
+            this.buttonSaveToXml.Location = new System.Drawing.Point(299, 357);
+            this.buttonSaveToXml.Name = "buttonSaveToXml";
+            this.buttonSaveToXml.Size = new System.Drawing.Size(130, 28);
+            this.buttonSaveToXml.TabIndex = 18;
+            this.buttonSaveToXml.Text = "Zapisz Plik";
+            this.buttonSaveToXml.UseVisualStyleBackColor = true;
+            this.buttonSaveToXml.Click += new System.EventHandler(this.SaveToXml);
+            // 
+            // buttonReadFromXml
+            // 
+            this.buttonReadFromXml.Location = new System.Drawing.Point(164, 357);
+            this.buttonReadFromXml.Name = "buttonReadFromXml";
+            this.buttonReadFromXml.Size = new System.Drawing.Size(129, 28);
+            this.buttonReadFromXml.TabIndex = 19;
+            this.buttonReadFromXml.Text = "Wczytaj Plik";
+            this.buttonReadFromXml.UseVisualStyleBackColor = true;
+            this.buttonReadFromXml.Click += new System.EventHandler(this.ReadFormXml);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1067, 405);
+            this.Controls.Add(this.buttonReadFromXml);
+            this.Controls.Add(this.buttonSaveToXml);
             this.Controls.Add(this.groupBoxUmowa);
             this.Controls.Add(this.button_save);
             this.Controls.Add(this.employeeList);
@@ -245,8 +270,6 @@ namespace pracownicy
             this.Name = "Form1";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_salary)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource)).EndInit();
             this.groupBoxUmowa.ResumeLayout(false);
             this.groupBoxUmowa.PerformLayout();
             this.ResumeLayout(false);
@@ -272,10 +295,9 @@ namespace pracownicy
         private System.Windows.Forms.RadioButton radioButton_dzielo;
         private System.Windows.Forms.ListBox employeeList;
         private System.Windows.Forms.Button button_save;
-        private System.Windows.Forms.BindingSource employeeBindingSource;
-        private System.Windows.Forms.BindingSource employeeBindingSource1;
         private System.Windows.Forms.GroupBox groupBoxUmowa;
-        private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private System.Windows.Forms.Button buttonSaveToXml;
+        private System.Windows.Forms.Button buttonReadFromXml;
     }
 }
 
