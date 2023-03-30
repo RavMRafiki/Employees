@@ -22,6 +22,8 @@ namespace pracownicy.View
         }
 
         public event Action<string, string, decimal, DateTime, Employee.Position, Employee.TypeOfContract> SaveClick;
+        public event Action SaveToXmlClick;
+        public event Action ReadFromXmlClick;
         public List<Employee> DisplayList
         {
             set
@@ -74,21 +76,17 @@ namespace pracownicy.View
             }
         }
 
-        //private void SaveToXml(object sender, EventArgs e)
-        //{
-        //    List<Employee> theEmployees = new List<Employee> { };
+        private void save_to_xml(object sender, EventArgs e)
+        {
 
-        //    foreach (var listBoxItem in employeeList.Items)
-        //    {
-        //        theEmployees.Add((Employee)listBoxItem);
-        //    }
+            SaveToXmlClick?.Invoke();
 
-        //    using (Stream fs = new FileStream(@"C:\Serializacja\emloyees.xml", FileMode.Create, FileAccess.Write, FileShare.None))
-        //    {
-        //        XmlSerializer serializer2 = new XmlSerializer(typeof(List<Employee>));
-        //        serializer2.Serialize(fs, theEmployees);
-        //    }
-        //}
+        }
+
+        private void read_from_xml(object sender, EventArgs e)
+        {
+            ReadFromXmlClick?.Invoke();
+        }
 
         //private void ReadFormXml(object sender, EventArgs e)
         //{

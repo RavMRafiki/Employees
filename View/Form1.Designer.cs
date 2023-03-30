@@ -1,4 +1,6 @@
 ﻿
+using System;
+
 namespace pracownicy.View
 {
     partial class Form1
@@ -239,6 +241,8 @@ namespace pracownicy.View
             this.buttonSaveToXml.TabIndex = 18;
             this.buttonSaveToXml.Text = "Zapisz Plik";
             this.buttonSaveToXml.UseVisualStyleBackColor = true;
+            this.buttonSaveToXml.Click += new System.EventHandler(this.save_to_xml);
+
             // 
             // buttonReadFromXml
             // 
@@ -248,6 +252,7 @@ namespace pracownicy.View
             this.buttonReadFromXml.TabIndex = 19;
             this.buttonReadFromXml.Text = "Wczytaj Plik";
             this.buttonReadFromXml.UseVisualStyleBackColor = true;
+            this.buttonReadFromXml.Click += new System.EventHandler(this.read_from_xml);
             // 
             // Form1
             // 
@@ -280,6 +285,7 @@ namespace pracownicy.View
             this.PerformLayout();
 
         }
+
 
         #endregion
 
