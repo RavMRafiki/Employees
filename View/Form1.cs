@@ -21,12 +21,12 @@ namespace pracownicy.View
             InitializeComponent();
         }
 
-        public event Action SaveClick;
+        public event Action<string, string, decimal, DateTime, Employee.Position, Employee.TypeOfContract> SaveClick;
         public List<Employee> DisplayList
         {
             set
             {
-                employeeList.ResetText();
+                employeeList.Items.Clear();
                 foreach (var element in value)
                 {
                     employeeList.Items.Add(element);
@@ -51,6 +51,9 @@ namespace pracownicy.View
             DateTime _birthday = dateTimePicker_birthday.Value;
             Employee.Position _positionValue = (Employee.Position)comboBox_position.SelectedItem;
             Employee.TypeOfContract _contract = ContractStatus();
+
+
+
             //employeeList.Items.Add(employee);
             SaveClick?.DynamicInvoke(_name,_surname,_salary,_birthday,_positionValue,_contract);
         }

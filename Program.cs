@@ -17,6 +17,7 @@ namespace pracownicy
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
+
             var view = new View.Form1();
             var model = new Model.MainModel();
             var presenter = new Presenter.MainPresenter(view, model);

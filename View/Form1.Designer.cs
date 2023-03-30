@@ -51,25 +51,25 @@ namespace pracownicy.View
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_salary)).BeginInit();
             this.groupBoxUmowa.SuspendLayout();
             this.SuspendLayout();
-            //// 
-            //// textBox_name
-            //// 
+            // 
+            // textBox_name
+            // 
             this.textBox_name.Location = new System.Drawing.Point(164, 31);
             this.textBox_name.Margin = new System.Windows.Forms.Padding(4);
             this.textBox_name.Name = "textBox_name";
             this.textBox_name.Size = new System.Drawing.Size(265, 22);
             this.textBox_name.TabIndex = 0;
-            //// 
-            //// textBox_surname
-            //// 
+            // 
+            // textBox_surname
+            // 
             this.textBox_surname.Location = new System.Drawing.Point(164, 63);
             this.textBox_surname.Margin = new System.Windows.Forms.Padding(4);
             this.textBox_surname.Name = "textBox_surname";
             this.textBox_surname.Size = new System.Drawing.Size(265, 22);
             this.textBox_surname.TabIndex = 1;
-            //// 
-            //// label1
-            //// 
+            // 
+            // label1
+            // 
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(90, 36);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
@@ -77,9 +77,9 @@ namespace pracownicy.View
             this.label1.Size = new System.Drawing.Size(33, 17);
             this.label1.TabIndex = 2;
             this.label1.Text = "Imię";
-            //// 
-            //// label2
-            //// 
+            // 
+            // label2
+            // 
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(56, 66);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
@@ -87,9 +87,9 @@ namespace pracownicy.View
             this.label2.Size = new System.Drawing.Size(67, 17);
             this.label2.TabIndex = 3;
             this.label2.Text = "Nazwisko";
-            //// 
-            //// label3
-            //// 
+            // 
+            // label3
+            // 
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(16, 100);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
@@ -97,9 +97,9 @@ namespace pracownicy.View
             this.label3.Size = new System.Drawing.Size(107, 17);
             this.label3.TabIndex = 4;
             this.label3.Text = "Data Urodzenia";
-            //// 
-            //// label4
-            //// 
+            // 
+            // label4
+            // 
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(69, 129);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
@@ -107,9 +107,9 @@ namespace pracownicy.View
             this.label4.Size = new System.Drawing.Size(51, 17);
             this.label4.TabIndex = 5;
             this.label4.Text = "Pensja";
-            //// 
-            //// label5
-            //// 
+            // 
+            // label5
+            // 
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(41, 162);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
@@ -117,9 +117,9 @@ namespace pracownicy.View
             this.label5.Size = new System.Drawing.Size(79, 17);
             this.label5.TabIndex = 6;
             this.label5.Text = "Stanowisko";
-            //// 
-            //// label6
-            //// 
+            // 
+            // label6
+            // 
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(24, 243);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
@@ -127,28 +127,29 @@ namespace pracownicy.View
             this.label6.Size = new System.Drawing.Size(99, 17);
             this.label6.TabIndex = 7;
             this.label6.Text = "Rodzaj umowy";
-            //// 
-            //// dateTimePicker_birthday
-            //// 
+            // 
+            // dateTimePicker_birthday
+            // 
             this.dateTimePicker_birthday.Location = new System.Drawing.Point(164, 95);
             this.dateTimePicker_birthday.Margin = new System.Windows.Forms.Padding(4);
+            this.dateTimePicker_birthday.MaxDate = new System.DateTime(2005, 3, 30, 12, 38, 17, 622);
+            this.dateTimePicker_birthday.MinDate = new System.DateTime(1923, 3, 30, 12, 38, 17, 622);
             this.dateTimePicker_birthday.Name = "dateTimePicker_birthday";
             this.dateTimePicker_birthday.Size = new System.Drawing.Size(265, 22);
             this.dateTimePicker_birthday.TabIndex = 8;
-            this.dateTimePicker_birthday.MaxDate = System.DateTime.Now.AddYears(-18);
-            this.dateTimePicker_birthday.MinDate = System.DateTime.Now.AddYears(-100);
-            //// 
-            //// comboBox_position
-            //// 
+            this.dateTimePicker_birthday.Value = new System.DateTime(2005, 3, 30, 12, 38, 17, 622);
+            // 
+            // comboBox_position
+            // 
             this.comboBox_position.DataSource = System.Enum.GetValues(typeof(Employee.Position));
             this.comboBox_position.Location = new System.Drawing.Point(164, 159);
             this.comboBox_position.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox_position.Name = "comboBox_position";
             this.comboBox_position.Size = new System.Drawing.Size(265, 24);
             this.comboBox_position.TabIndex = 9;
-            //// 
-            //// numericUpDown_salary
-            //// 
+            // 
+            // numericUpDown_salary
+            // 
             this.numericUpDown_salary.Location = new System.Drawing.Point(164, 127);
             this.numericUpDown_salary.Margin = new System.Windows.Forms.Padding(4);
             this.numericUpDown_salary.Maximum = new decimal(new int[] {
@@ -159,9 +160,9 @@ namespace pracownicy.View
             this.numericUpDown_salary.Name = "numericUpDown_salary";
             this.numericUpDown_salary.Size = new System.Drawing.Size(267, 22);
             this.numericUpDown_salary.TabIndex = 11;
-            //// 
-            //// radioButton_praca
-            //// 
+            // 
+            // radioButton_praca
+            // 
             this.radioButton_praca.AutoSize = true;
             this.radioButton_praca.Location = new System.Drawing.Point(18, 22);
             this.radioButton_praca.Margin = new System.Windows.Forms.Padding(4);
@@ -170,9 +171,9 @@ namespace pracownicy.View
             this.radioButton_praca.TabIndex = 12;
             this.radioButton_praca.Text = "Umowa o pracę";
             this.radioButton_praca.UseVisualStyleBackColor = true;
-            //// 
-            //// radioButton_zlecenie
-            //// 
+            // 
+            // radioButton_zlecenie
+            // 
             this.radioButton_zlecenie.AutoSize = true;
             this.radioButton_zlecenie.Location = new System.Drawing.Point(18, 51);
             this.radioButton_zlecenie.Margin = new System.Windows.Forms.Padding(4);
@@ -181,9 +182,9 @@ namespace pracownicy.View
             this.radioButton_zlecenie.TabIndex = 13;
             this.radioButton_zlecenie.Text = "Umowa zlecenie";
             this.radioButton_zlecenie.UseVisualStyleBackColor = true;
-            //// 
-            //// radioButton_dzielo
-            //// 
+            // 
+            // radioButton_dzielo
+            // 
             this.radioButton_dzielo.AutoSize = true;
             this.radioButton_dzielo.Location = new System.Drawing.Point(18, 80);
             this.radioButton_dzielo.Margin = new System.Windows.Forms.Padding(4);
@@ -192,19 +193,24 @@ namespace pracownicy.View
             this.radioButton_dzielo.TabIndex = 14;
             this.radioButton_dzielo.Text = "Umowa o dzieło";
             this.radioButton_dzielo.UseVisualStyleBackColor = true;
-            //// 
-            //// employeeList
-            //// 
+            // 
+            // employeeList
+            // 
             this.employeeList.FormattingEnabled = true;
             this.employeeList.ItemHeight = 16;
+            this.employeeList.Items.AddRange(new object[] {
+            "dskjsfalk;",
+            "dlkafsjd;lfk",
+            "klsafjdals",
+            "lkfaj;dskfja"});
             this.employeeList.Location = new System.Drawing.Point(439, 23);
             this.employeeList.Margin = new System.Windows.Forms.Padding(4);
             this.employeeList.Name = "employeeList";
             this.employeeList.Size = new System.Drawing.Size(615, 372);
             this.employeeList.TabIndex = 15;
-            //// 
-            //// button_save
-            //// 
+            // 
+            // button_save
+            // 
             this.button_save.Location = new System.Drawing.Point(164, 322);
             this.button_save.Margin = new System.Windows.Forms.Padding(4);
             this.button_save.Name = "button_save";
@@ -213,9 +219,9 @@ namespace pracownicy.View
             this.button_save.Text = "Zapisz";
             this.button_save.UseVisualStyleBackColor = true;
             this.button_save.Click += new System.EventHandler(this.button_save_Click);
-            //// 
-            //// groupBoxUmowa
-            //// 
+            // 
+            // groupBoxUmowa
+            // 
             this.groupBoxUmowa.Controls.Add(this.radioButton_praca);
             this.groupBoxUmowa.Controls.Add(this.radioButton_zlecenie);
             this.groupBoxUmowa.Controls.Add(this.radioButton_dzielo);
@@ -224,29 +230,27 @@ namespace pracownicy.View
             this.groupBoxUmowa.Size = new System.Drawing.Size(265, 125);
             this.groupBoxUmowa.TabIndex = 17;
             this.groupBoxUmowa.TabStop = false;
-            //// 
-            //// buttonSaveToXml
-            //// 
+            // 
+            // buttonSaveToXml
+            // 
             this.buttonSaveToXml.Location = new System.Drawing.Point(299, 357);
             this.buttonSaveToXml.Name = "buttonSaveToXml";
             this.buttonSaveToXml.Size = new System.Drawing.Size(130, 28);
             this.buttonSaveToXml.TabIndex = 18;
             this.buttonSaveToXml.Text = "Zapisz Plik";
             this.buttonSaveToXml.UseVisualStyleBackColor = true;
-            //this.buttonSaveToXml.Click += new System.EventHandler(this.SaveToXml);
-            //// 
-            //// buttonReadFromXml
-            //// 
+            // 
+            // buttonReadFromXml
+            // 
             this.buttonReadFromXml.Location = new System.Drawing.Point(164, 357);
             this.buttonReadFromXml.Name = "buttonReadFromXml";
             this.buttonReadFromXml.Size = new System.Drawing.Size(129, 28);
             this.buttonReadFromXml.TabIndex = 19;
             this.buttonReadFromXml.Text = "Wczytaj Plik";
             this.buttonReadFromXml.UseVisualStyleBackColor = true;
-            //this.buttonReadFromXml.Click += new System.EventHandler(this.ReadFormXml);
-            //// 
-            //// Form1
-            //// 
+            // 
+            // Form1
+            // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1067, 405);
