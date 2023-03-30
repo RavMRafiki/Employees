@@ -21,33 +21,55 @@ namespace pracownicy.View
             InitializeComponent();
         }
 
-        //private void button_save_Click(object sender, EventArgs e)
-        //{
-        //    Employee employee = new Employee();
-        //    employee.Name = textBox_name.Text;
-        //    employee.Surname = textBox_surname.Text;
-        //    employee.Salary = numericUpDown_salary.Value;
-        //    employee.Birthday = dateTimePicker_birthday.Value;
-        //    employee.PositionValue = (Employee.Position)comboBox_position.SelectedItem;
-        //    employee.Contract = ContractStatus();
-        //    employeeList.Items.Add(employee);
-        //}
+        public event Action SaveClick;
+        public List<Employee> DisplayList
+        {
+            set
+            {
+                employeeList.ResetText();
+                foreach (var element in value)
+                {
+                    employeeList.Items.Add(element);
+                }
+            }
+            get
+            {
+                List<Employee> theEmployees = new List<Employee>();
+                foreach (var listBoxItem in employeeList.Items)
+                {
+                    theEmployees.Add((Employee)listBoxItem);
+                }
+                return theEmployees;
+            }
+        }
 
-        //private Employee.TypeOfContract ContractStatus()
-        //{
-        //    if (radioButton_dzielo.Checked)
-        //    {
-        //        return Employee.TypeOfContract.Dzielo;
-        //    } 
-        //    else if (radioButton_zlecenie.Checked)
-        //    {
-        //        return Employee.TypeOfContract.Zlecenie;
-        //    }
-        //    else
-        //    {
-        //        return Employee.TypeOfContract.Praca;
-        //    }
-        //}
+        private void button_save_Click(object sender, EventArgs e)
+        {
+            string _name = textBox_name.Text;
+            string _surname = textBox_surname.Text;
+            decimal _salary = numericUpDown_salary.Value;
+            DateTime _birthday = dateTimePicker_birthday.Value;
+            Employee.Position _positionValue = (Employee.Position)comboBox_position.SelectedItem;
+            Employee.TypeOfContract _contract = ContractStatus();
+            //employeeList.Items.Add(employee);
+            SaveClick?.DynamicInvoke(_name,_surname,_salary,_birthday,_positionValue,_contract);
+        }
+
+        private Employee.TypeOfContract ContractStatus()
+        {
+            if (radioButton_dzielo.Checked)
+            {
+                return Employee.TypeOfContract.Dzielo;
+            }
+            else if (radioButton_zlecenie.Checked)
+            {
+                return Employee.TypeOfContract.Zlecenie;
+            }
+            else
+            {
+                return Employee.TypeOfContract.Praca;
+            }
+        }
 
         //private void SaveToXml(object sender, EventArgs e)
         //{

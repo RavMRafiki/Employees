@@ -212,7 +212,7 @@ namespace pracownicy.View
             this.button_save.TabIndex = 16;
             this.button_save.Text = "Zapisz";
             this.button_save.UseVisualStyleBackColor = true;
-            //this.button_save.Click += new System.EventHandler(this.button_save_Click);
+            this.button_save.Click += new System.EventHandler(this.button_save_Click);
             //// 
             //// groupBoxUmowa
             //// 

@@ -15,5 +15,7 @@ namespace pracownicy.Presenter
             _view = view;
             _model = model;
         }
+        private void UpdateView() => _view.DisplayList = _model.employed;
+
     }
 }
