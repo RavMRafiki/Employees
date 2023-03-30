@@ -16,7 +16,11 @@ namespace pracownicy
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+
+            var view = new View.Form1();
+            var model = new Model.MainModel();
+            var presenter = new Presenter.MainPresenter(view, model);
+            Application.Run(view);
         }
     }
 }
