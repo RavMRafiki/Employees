@@ -217,11 +217,6 @@ namespace pracownicy.View
             // 
             this.employeeList.FormattingEnabled = true;
             this.employeeList.ItemHeight = 16;
-            this.employeeList.Items.AddRange(new object[] {
-            "dskjsfalk;",
-            "dlkafsjd;lfk",
-            "klsafjdals",
-            "lkfaj;dskfja"});
             this.employeeList.Location = new System.Drawing.Point(439, 23);
             this.employeeList.Margin = new System.Windows.Forms.Padding(4);
             this.employeeList.Name = "employeeList";

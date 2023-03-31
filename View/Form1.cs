@@ -118,7 +118,7 @@ namespace pracownicy.View
 
         private void textBox_name_Validating(object sender, CancelEventArgs e)
         {
-            if (!Regex.Match(textBox_name.Text, "^[A-Ż][a-żA-Ż]*$").Success)
+            if (!Regex.Match(textBox_name.Text, "^^[A-ZĄ-Ż][a-zA-Zó-żÓ-Ż]*$").Success)
             {
                 e.Cancel = true;
                 errorProvider.SetError(textBox_name, "Wpisz poprawnie imię!");
@@ -134,7 +134,7 @@ namespace pracownicy.View
 
         private void textBox_surname_Validating(object sender, CancelEventArgs e)
         {
-            if (!Regex.Match(textBox_surname.Text, "^[A-Ż][a-żA-Ż]*$").Success)
+            if (!Regex.Match(textBox_surname.Text, "^^[A-ZĄ-Ż][a-zA-Zó-żÓ-Ż]*$").Success)
             {
                 e.Cancel = true;
                 errorProvider.SetError(textBox_surname, "Wpisz poprawnie nazwisko!");
