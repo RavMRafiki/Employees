@@ -26,14 +26,16 @@ namespace pracownicy.Presenter
 
         private void _view_ReadFromXmlClick()
         {
-
+            List<Employee> readEmployees = new List<Employee>();
 
             XmlSerializer serializer3 = new XmlSerializer(typeof(List<Employee>));
 
             using (FileStream fs2 = File.OpenRead(@"C:\Serializacja\emloyees.xml"))
             {
-                _model.employed = (List<Employee>)serializer3.Deserialize(fs2);
+                readEmployees = (List<Employee>)serializer3.Deserialize(fs2);
+                    
             }
+            _model.employed = _model.employed.Concat(readEmployees).ToList();
             UpdateView();
 
         }
