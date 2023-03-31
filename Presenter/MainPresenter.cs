@@ -21,6 +21,17 @@ namespace pracownicy.Presenter
             _view.SaveClick += _view_SaveClick;
             _view.SaveToXmlClick += _view_SaveToXmlClick;
             _view.ReadFromXmlClick += _view_ReadFromXmlClick;
+            _view.EditEmployeeClick += _view_EditEmployeeClick;
+            UpdateView();
+        }
+
+        private void _view_EditEmployeeClick(int index)
+        {
+            if (_model.employed.Count() > index && index >= 0)
+            {
+                _view.EditedEmployee = _model.employed[index];
+                _model.employed.RemoveAt(index);
+            }
             UpdateView();
         }
 

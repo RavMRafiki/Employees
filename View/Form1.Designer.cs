@@ -210,6 +210,7 @@ namespace pracownicy.View
             this.employeeList.Name = "employeeList";
             this.employeeList.Size = new System.Drawing.Size(615, 372);
             this.employeeList.TabIndex = 15;
+            this.employeeList.SelectedIndexChanged += new System.EventHandler(this.button_edit_click);
             // 
             // button_save
             // 
@@ -242,7 +243,6 @@ namespace pracownicy.View
             this.buttonSaveToXml.Text = "Zapisz Plik";
             this.buttonSaveToXml.UseVisualStyleBackColor = true;
             this.buttonSaveToXml.Click += new System.EventHandler(this.save_to_xml);
-
             // 
             // buttonReadFromXml
             // 

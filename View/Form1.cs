@@ -24,6 +24,7 @@ namespace pracownicy.View
         public event Action<string, string, decimal, DateTime, Employee.Position, Employee.TypeOfContract> SaveClick;
         public event Action SaveToXmlClick;
         public event Action ReadFromXmlClick;
+        public event Action<int> EditEmployeeClick;
         public List<Employee> DisplayList
         {
             set
@@ -42,6 +43,28 @@ namespace pracownicy.View
                     theEmployees.Add((Employee)listBoxItem);
                 }
                 return theEmployees;
+            }
+        }
+        public Employee EditedEmployee
+        {
+            set
+            {
+                textBox_name.Text = value.Name;
+                textBox_surname.Text = value.Surname;
+                numericUpDown_salary.Value = value.Salary;
+                dateTimePicker_birthday.Value = value.Birthday;
+                comboBox_position.SelectedItem = value.PositionValue;
+                if(value.Contract == Employee.TypeOfContract.Dzielo)
+                {
+                    radioButton_dzielo.Checked = true;
+                } else if(value.Contract == Employee.TypeOfContract.Zlecenie)
+                {
+                    radioButton_zlecenie.Checked = true;
+                }
+                else
+                {
+                    radioButton_praca.Checked = true;
+                }
             }
         }
 
@@ -88,22 +111,10 @@ namespace pracownicy.View
             ReadFromXmlClick?.Invoke();
         }
 
-        //private void ReadFormXml(object sender, EventArgs e)
-        //{
-        //    List<Employee> theEmployees = new List<Employee> { };
-
-        //    XmlSerializer serializer3 = new XmlSerializer(typeof(List<Employee>));
-
-        //    using (FileStream fs2 = File.OpenRead(@"C:\Serializacja\emloyees.xml"))
-        //    {
-        //        theEmployees = (List<Employee>)serializer3.Deserialize(fs2);
-        //    }
-
-        //    foreach (Employee __employee in theEmployees)
-        //    {
-        //        employeeList.Items.Add(__employee);
-        //    }
-        //}
-
+        private void button_edit_click(object sender, EventArgs e)
+        {
+            
+            EditEmployeeClick?.Invoke(employeeList.SelectedIndex);
+        }
     }
 }
