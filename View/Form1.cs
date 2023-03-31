@@ -11,6 +11,7 @@ using System.Windows.Forms;
 using System.IO;
 using System.Xml.Serialization;
 using System.Globalization;
+using System.Text.RegularExpressions;
 
 namespace pracownicy.View
 {
@@ -71,14 +72,17 @@ namespace pracownicy.View
 
         private void button_save_Click(object sender, EventArgs e)
         {
-            string _name = textBox_name.Text;
-            string _surname = textBox_surname.Text;
-            decimal _salary = numericUpDown_salary.Value;
-            DateTime _birthday = dateTimePicker_birthday.Value;
-            Employee.Position _positionValue = (Employee.Position)comboBox_position.SelectedItem;
-            Employee.TypeOfContract _contract = ContractStatus();
+            if (ValidateChildren(ValidationConstraints.Enabled))
+            {
+                string _name = textBox_name.Text;
+                string _surname = textBox_surname.Text;
+                decimal _salary = numericUpDown_salary.Value;
+                DateTime _birthday = dateTimePicker_birthday.Value;
+                Employee.Position _positionValue = (Employee.Position)comboBox_position.SelectedItem;
+                Employee.TypeOfContract _contract = ContractStatus();
 
-            SaveClick?.DynamicInvoke(_name,_surname,_salary,_birthday,_positionValue,_contract);
+                SaveClick?.DynamicInvoke(_name, _surname, _salary, _birthday, _positionValue, _contract);
+            }
         }
 
         private Employee.TypeOfContract ContractStatus()
@@ -110,6 +114,38 @@ namespace pracownicy.View
         private void button_edit_click(object sender, EventArgs e)
         {
             EditEmployeeClick?.Invoke(employeeList.SelectedIndex);
+        }
+
+        private void textBox_name_Validating(object sender, CancelEventArgs e)
+        {
+            if (!Regex.Match(textBox_name.Text, "^[A-Ż][a-żA-Ż]*$").Success)
+            {
+                e.Cancel = true;
+                errorProvider.SetError(textBox_name, "Wpisz poprawnie imię!");
+                textBox_name.Focus();
+                return;
+            }
+            else
+            {
+                e.Cancel = false;
+                errorProvider.SetError(textBox_name, null);
+            }
+        }
+
+        private void textBox_surname_Validating(object sender, CancelEventArgs e)
+        {
+            if (!Regex.Match(textBox_surname.Text, "^[A-Ż][a-żA-Ż]*$").Success)
+            {
+                e.Cancel = true;
+                errorProvider.SetError(textBox_surname, "Wpisz poprawnie nazwisko!");
+                textBox_surname.Focus();
+                return;
+            }
+            else
+            {
+                e.Cancel = false;
+                errorProvider.SetError(textBox_surname, null);
+            }
         }
     }
 }

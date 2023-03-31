@@ -31,6 +31,7 @@ namespace pracownicy.View
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.textBox_name = new System.Windows.Forms.TextBox();
             this.textBox_surname = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -50,8 +51,10 @@ namespace pracownicy.View
             this.groupBoxUmowa = new System.Windows.Forms.GroupBox();
             this.buttonSaveToXml = new System.Windows.Forms.Button();
             this.buttonReadFromXml = new System.Windows.Forms.Button();
+            this.errorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_salary)).BeginInit();
             this.groupBoxUmowa.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).BeginInit();
             this.SuspendLayout();
             // 
             // textBox_name
@@ -61,6 +64,7 @@ namespace pracownicy.View
             this.textBox_name.Name = "textBox_name";
             this.textBox_name.Size = new System.Drawing.Size(265, 22);
             this.textBox_name.TabIndex = 0;
+            this.textBox_name.Validating += new System.ComponentModel.CancelEventHandler(this.textBox_name_Validating);
             // 
             // textBox_surname
             // 
@@ -69,6 +73,7 @@ namespace pracownicy.View
             this.textBox_surname.Name = "textBox_surname";
             this.textBox_surname.Size = new System.Drawing.Size(265, 22);
             this.textBox_surname.TabIndex = 1;
+            this.textBox_surname.Validating += new System.ComponentModel.CancelEventHandler(this.textBox_surname_Validating);
             // 
             // label1
             // 
@@ -159,18 +164,30 @@ namespace pracownicy.View
             0,
             0,
             0});
+            this.numericUpDown_salary.Minimum = new decimal(new int[] {
+            872,
+            0,
+            0,
+            0});
             this.numericUpDown_salary.Name = "numericUpDown_salary";
             this.numericUpDown_salary.Size = new System.Drawing.Size(267, 22);
             this.numericUpDown_salary.TabIndex = 11;
+            this.numericUpDown_salary.Value = new decimal(new int[] {
+            3490,
+            0,
+            0,
+            0});
             // 
             // radioButton_praca
             // 
             this.radioButton_praca.AutoSize = true;
+            this.radioButton_praca.Checked = true;
             this.radioButton_praca.Location = new System.Drawing.Point(18, 22);
             this.radioButton_praca.Margin = new System.Windows.Forms.Padding(4);
             this.radioButton_praca.Name = "radioButton_praca";
             this.radioButton_praca.Size = new System.Drawing.Size(127, 21);
             this.radioButton_praca.TabIndex = 12;
+            this.radioButton_praca.TabStop = true;
             this.radioButton_praca.Text = "Umowa o pracę";
             this.radioButton_praca.UseVisualStyleBackColor = true;
             // 
@@ -254,6 +271,10 @@ namespace pracownicy.View
             this.buttonReadFromXml.UseVisualStyleBackColor = true;
             this.buttonReadFromXml.Click += new System.EventHandler(this.read_from_xml);
             // 
+            // errorProvider
+            // 
+            this.errorProvider.ContainerControl = this;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -281,6 +302,7 @@ namespace pracownicy.View
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_salary)).EndInit();
             this.groupBoxUmowa.ResumeLayout(false);
             this.groupBoxUmowa.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -308,6 +330,7 @@ namespace pracownicy.View
         private System.Windows.Forms.GroupBox groupBoxUmowa;
         private System.Windows.Forms.Button buttonSaveToXml;
         private System.Windows.Forms.Button buttonReadFromXml;
+        private System.Windows.Forms.ErrorProvider errorProvider;
     }
 }
 
