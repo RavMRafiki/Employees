@@ -9,7 +9,5 @@ namespace pracownicy.Model
     class MainModel
     {
         public List<Employee> employed = new List<Employee>();
-
-
     }
 }

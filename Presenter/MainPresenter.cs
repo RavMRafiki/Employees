@@ -13,6 +13,7 @@ namespace pracownicy.Presenter
     {
         private View.Form1 _view;
         private Model.MainModel _model;
+
         public MainPresenter(View.Form1 view, Model.MainModel model)
         {
             _view = view;
@@ -38,23 +39,18 @@ namespace pracownicy.Presenter
         private void _view_ReadFromXmlClick()
         {
             List<Employee> readEmployees = new List<Employee>();
-
             XmlSerializer serializer3 = new XmlSerializer(typeof(List<Employee>));
-
             using (FileStream fs2 = File.OpenRead(@"C:\Serializacja\emloyees.xml"))
             {
                 readEmployees = (List<Employee>)serializer3.Deserialize(fs2);
-                    
             }
             _model.employed = _model.employed.Concat(readEmployees).ToList();
             UpdateView();
-
         }
     
 
         private void _view_SaveToXmlClick()
         {
-
             using (Stream fs = new FileStream(@"C:\Serializacja\emloyees.xml", FileMode.Create, FileAccess.Write, FileShare.None))
             {
                 XmlSerializer serializer2 = new XmlSerializer(typeof(List<Employee>));
@@ -65,12 +61,6 @@ namespace pracownicy.Presenter
         private void UpdateView() => _view.DisplayList = _model.employed;
         public void _view_SaveClick(string _name, string _surname, decimal _salary, DateTime _birthday, Employee.Position _positionValue, Employee.TypeOfContract _contract)
         {
-            //List<Employee> theEmployees = new List<Employee>();
-            //Employee employeeee = new Employee();
-            //employeeee.Name = "hfjh";
-            //theEmployees.Add(employeeee);
-            //_view.DisplayList = theEmployees;
-
             Employee employee = new Employee();
             employee.Name = _name;
             employee.Surname = _surname;
@@ -82,7 +72,6 @@ namespace pracownicy.Presenter
             _model.employed.Add(employee);
 
             UpdateView();
-
         }
     }
 }

@@ -25,6 +25,7 @@ namespace pracownicy.View
         public event Action SaveToXmlClick;
         public event Action ReadFromXmlClick;
         public event Action<int> EditEmployeeClick;
+
         public List<Employee> DisplayList
         {
             set
@@ -77,9 +78,6 @@ namespace pracownicy.View
             Employee.Position _positionValue = (Employee.Position)comboBox_position.SelectedItem;
             Employee.TypeOfContract _contract = ContractStatus();
 
-
-
-            //employeeList.Items.Add(employee);
             SaveClick?.DynamicInvoke(_name,_surname,_salary,_birthday,_positionValue,_contract);
         }
 
@@ -101,9 +99,7 @@ namespace pracownicy.View
 
         private void save_to_xml(object sender, EventArgs e)
         {
-
             SaveToXmlClick?.Invoke();
-
         }
 
         private void read_from_xml(object sender, EventArgs e)
@@ -113,7 +109,6 @@ namespace pracownicy.View
 
         private void button_edit_click(object sender, EventArgs e)
         {
-            
             EditEmployeeClick?.Invoke(employeeList.SelectedIndex);
         }
     }
